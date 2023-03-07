@@ -143,11 +143,12 @@ namespace TextQ
                 fs.Close();
                 return image;
             }
-            else
-            {
-                ImageBrush image = new ImageBrush(new BitmapImage(new Uri(LoadEvent(0), UriKind.Relative)));
-                return image;
-            }
+            return null;
+        }
+        public ImageBrush LoadNewGame() 
+        {
+            ImageBrush image = new ImageBrush(new BitmapImage(new Uri(LoadEvent(0), UriKind.Relative)));
+            return image;
         }
     }
 }

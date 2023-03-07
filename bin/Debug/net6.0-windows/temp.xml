@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NumberE>4</NumberE>
+  <End>true</End>
+  <EndArmorEvent>true</EndArmorEvent>
+  <EndSwordEvent>true</EndSwordEvent>
+  <EndpotionEvent>true</EndpotionEvent>
+  <SwordEvent>false</SwordEvent>
+  <PotionEvent>false</PotionEvent>
+  <ArmorEvent>false</ArmorEvent>
+  <IndexLine>0</IndexLine>
+  <path>END.txt</path>
+</Model>

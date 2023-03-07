@@ -26,8 +26,9 @@ namespace TextQ
             public MainWindow()
             {
                 InitializeComponent();
-                Background = VM.LoadTemp();
-                TB.Text = VM.NextLine();
+                
+               // Background = VM.LoadTemp();
+                //TB.Text = VM.NextLine();
             }
             private void Button_Click(object sender, RoutedEventArgs e) // кнопка назад
             {
@@ -70,6 +71,7 @@ namespace TextQ
             private void Button_Click_2(object sender, RoutedEventArgs e) // загрука события с мечом
             {
                 Background = new ImageBrush(new BitmapImage(new Uri(VM.LoadEvent(1), UriKind.Relative)));
+                TB.Text = VM.NextLine();
                 ButtonVisibilityOrDisable(2);
                 ButtonVisibilityOrDisable(4);
             }
@@ -77,6 +79,7 @@ namespace TextQ
             private void Button_Click_3(object sender, RoutedEventArgs e) // загрузка события с броней
             {
                 Background = new ImageBrush(new BitmapImage(new Uri(VM.LoadEvent(2), UriKind.Relative)));
+                TB.Text = VM.NextLine();
                 ButtonVisibilityOrDisable(2);
                 ButtonVisibilityOrDisable(4);
             }
@@ -84,6 +87,7 @@ namespace TextQ
             private void Button_Click_4(object sender, RoutedEventArgs e)// загрузка события с зельем
             {
                 Background = new ImageBrush(new BitmapImage(new Uri(VM.LoadEvent(3), UriKind.Relative)));
+                TB.Text = VM.NextLine();
                 ButtonVisibilityOrDisable(2);
                 ButtonVisibilityOrDisable(4);
             }
@@ -201,5 +205,30 @@ namespace TextQ
                 TB.Text = VM.NextLine();
                 VM.SaveTemp();
             }
+
+        private void Button_Click_10(object sender, RoutedEventArgs e) // Кнопка начать новую игру
+        {
+            Background = VM.LoadNewGame();
+            TB.Text = VM.NextLine();
+            TB.Visibility = Visibility.Visible;
+            B_Next.Visibility = Visibility.Visible;
+            B_Back.Visibility = Visibility.Visible;
+            B_New_Game.Visibility = Visibility.Collapsed;
+            B_Load_Game.Visibility = Visibility.Collapsed;
+        }
+
+        private void Button_Click_11(object sender, RoutedEventArgs e) // Кнопка продолжить
+        {
+            if (VM.LoadTemp() != null)
+            {
+                Background = VM.LoadTemp();
+                TB.Text = VM.NextLine();
+                TB.Visibility = Visibility.Visible;
+                B_Next.Visibility = Visibility.Visible;
+                B_Back.Visibility = Visibility.Visible;
+                B_New_Game.Visibility = Visibility.Collapsed;
+                B_Load_Game.Visibility = Visibility.Collapsed;
+            }
+        }
     }
 }

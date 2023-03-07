@@ -17,11 +17,12 @@
             <Button Name="B_Romsh" Content="Ромашка" HorizontalAlignment="Left" Margin="156,161,0,0" VerticalAlignment="Top" Height="58" Width="130" RenderTransformOrigin="0.312,2.827" Click="Button_Click_7" Visibility="Collapsed"/>
             <Button Name="B_FlowerOfMane" Content="Цветок маны" HorizontalAlignment="Left" Margin="348,161,0,0" VerticalAlignment="Top" Height="58" Width="130" Click="Button_Click_8" Visibility="Collapsed"/>
             <Button Name="B_FlowerOFLife" Content="Цветок жизни" HorizontalAlignment="Left" Margin="551,161,0,0" VerticalAlignment="Top" Height="58" Width="124" Click="Button_Click_9" Visibility="Collapsed"/>
+            <Button Name="B_New_Game" Content="Новая игра" HorizontalAlignment="Center" Margin="0,138,0,0" VerticalAlignment="Top" Height="81" Width="172" Click="Button_Click_10"/>
+            <Button Name="B_Load_Game" Content="Продолжить игру" HorizontalAlignment="Center" Margin="0,253,0,0" VerticalAlignment="Top" Height="81" Width="172" Click="Button_Click_11"/>
         </Grid>
-        <Button Name="B_Next"  HorizontalAlignment="Left" Margin="653,346,0,0" VerticalAlignment="Top" Height="52" Width="113" Click="Button_Click_1" RenderTransformOrigin="0.519,0.469" Content="Далее"/>
-        <Button Name="B_Back"  HorizontalAlignment="Left" Margin="48,347,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.705,-0.067" Width="112" Height="50" Click="Button_Click" Content="Назад">
+        <Button Visibility="Collapsed" Name="B_Next"  HorizontalAlignment="Left" Margin="653,346,0,0" VerticalAlignment="Top" Height="52" Width="113" Click="Button_Click_1" RenderTransformOrigin="0.519,0.469" Content="Далее"/>
+        <Button Visibility="Collapsed" Name="B_Back"  HorizontalAlignment="Left" Margin="48,347,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.705,-0.067" Width="112" Height="50" Click="Button_Click" Content="Назад">
         </Button>
-        <TextBox Name="TB" HorizontalAlignment="Left" Margin="212,346,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="405" Height="52">
-        </TextBox>
+        <TextBox  Visibility="Collapsed" IsReadOnly="True" Name="TB" HorizontalAlignment="Left" Margin="212,346,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="405" Height="52"/>
     </Grid>
 </Window>
